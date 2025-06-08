@@ -1,0 +1,1 @@
+export const PUBLIC_URL = "https://navkiraninfotech.com/g-mee-api/api/v1/apps/list?kid_id=378"

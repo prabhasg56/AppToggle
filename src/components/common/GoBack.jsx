@@ -1,8 +1,8 @@
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import { lightColor } from '../../styles/GlobalStyles';
+import Entypo from 'react-native-vector-icons/Entypo';
+import { primaryColor } from '../../styles/GlobalStyles';
 
 const GoBack = ({
   title = '',
@@ -11,7 +11,7 @@ const GoBack = ({
   iconColor = 'white',
   titleColor = 'white',
   iconSize = 20,
-  backgroundColor = lightColor,
+  backgroundColor = primaryColor,
   containerStyle = {},
   textStyle = {},
 }) => {
@@ -29,7 +29,7 @@ const GoBack = ({
     <View style={[styles.container, { backgroundColor }, containerStyle]}>
       {showIcon && (
         <TouchableOpacity onPress={handlePress}>
-          <AntDesign name="arrowleft" size={iconSize} color={iconColor} />
+          <Entypo name="chevron-left" size={iconSize} color={iconColor} />
         </TouchableOpacity>
       )}
       {title ? (

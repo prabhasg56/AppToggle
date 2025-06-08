@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
-export const primaryColor = "#8fa626";
-export const lightColor = "#b7d340";
+export const primaryColor = "#48c774";
+export const lightColor = "#63cf89";
 export const activeColor = "#6b7d1c";
 export const buttonColor = "#b8d700";
 export const buttonLightColor = "#f8f9c5";

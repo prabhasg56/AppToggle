@@ -5,7 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { lightColor, primaryColor } from '../styles/GlobalStyles';
+import { lightColor } from '../styles/GlobalStyles';
 import { HomeStack, MyKitStack, ProfileStack, VideoStack } from './StackRoutes';
 
 const Tab = createBottomTabNavigator();
@@ -38,9 +38,9 @@ const BottomTabRoutes = () => {
         },
 
         {
-            name: "You",
+            name: "Profile",
             component: ProfileStack,
-            label: "You",
+            label: "Profile",
             width: 35,
             height: 30,
             header: false,
@@ -48,7 +48,7 @@ const BottomTabRoutes = () => {
     ]
     return (
         <Tab.Navigator
-            initialRouteName="Home"
+            initialRouteName="Profile"
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
@@ -66,7 +66,7 @@ const BottomTabRoutes = () => {
                         iconName = focused ? 'youtube-subscription' : 'youtube-subscription';
                         iconComponent = <MaterialCommunityIcons name={iconName} size={size} color={focused ? lightColor : color} />
                     }
-                    else if (routeName === "You") {
+                    else if (routeName === "Profile") {
                         iconName = focused ? 'person-circle' : 'person-circle-outline';
                         iconComponent = <Ionicons name={iconName} size={size} color={focused ? lightColor : color} />
                     }
