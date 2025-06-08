@@ -1,12 +1,16 @@
 import React from 'react';
 import { View, Text, StyleSheet, Switch, Image } from 'react-native';
-import { primaryColor } from '../../styles/GlobalStyles';
+import { lightColor, primaryColor } from '../../styles/GlobalStyles';
 
 const AppToggleItem = ({ item, onToggle }) => (
   <View style={styles.item}>
     <Image source={{ uri: item.app_icon }} style={styles.icon} />
     <Text style={styles.label}>{item.app_name}</Text>
-    <Switch value={item.is_enable} onValueChange={onToggle} thumbColor={item.is_enable ? primaryColor : '#fff'}
+    <Switch
+      value={item.is_enable}
+      onValueChange={onToggle}
+      trackColor={{ false: "gray", true: "#b1e7c4" }}
+      thumbColor={item.is_enable ? primaryColor : '#f2f2f2'}
     />
   </View>
 );

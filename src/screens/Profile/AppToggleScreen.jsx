@@ -11,6 +11,7 @@ import AppToggleItem from '../../components/profile/AppToggleItem';
 import SearchBox from '../../components/common/SearchBox';
 import Loader from '../../components/common/Loader';
 import { PUBLIC_URL } from '../../services/api';
+import EmptyList from '../../components/profile/EmptyList';
 
 const AppToggleScreen = () => {
   const [apps, setApps] = useState([]);
@@ -71,7 +72,7 @@ const AppToggleScreen = () => {
   if (loading) {
     return <Loader />;
   }
-
+  
   return (
     <View style={styles.container}>
       <SearchBox value={search} onChangeText={handleSearch} />
@@ -79,6 +80,7 @@ const AppToggleScreen = () => {
         data={filteredApps}
         keyExtractor={(item) => item.app_id.toString()}
         renderItem={renderItem}
+        ListEmptyComponent={<EmptyList/>}
         initialNumToRender={10}
         maxToRenderPerBatch={15}
         windowSize={21}
@@ -100,4 +102,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  emptyContainer: {
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center',
+  paddingVertical: 50,
+},
+emptyText: {
+  fontSize: 16,
+  color: '#999',
+},
+
 });

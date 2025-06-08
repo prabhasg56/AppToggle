@@ -19,7 +19,7 @@ export default function AppTopTabs() {
           left: SCREEN_WIDTH * 0.07, // aligns under each tab title
         },
         tabBarLabelStyle: {
-          fontWeight: '600',
+          fontWeight: '900',
           textTransform: 'none',
           fontSize: SCREEN_WIDTH < 350 ? 12 : 14,
         },
